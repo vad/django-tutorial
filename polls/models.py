@@ -8,6 +8,10 @@ class Question(models.Model):
     def __str__(self):
         return '[{}] {}'.format(self.pk, self.question_text)
 
+    def get_absolute_url(self):
+        from django.urls import reverse
+        return reverse('question-detail', args=[str(self.id)])
+
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
