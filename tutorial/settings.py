@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'polls',
+    'veicoli',
 
     'django.contrib.admin',
     'django.contrib.auth',
